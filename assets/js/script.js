@@ -73,25 +73,30 @@ function katanaChoiceComputer(){
 }
 
 function endRound() {
-    figthResult.textContent = "";
+    if (Number(scorePlayer.textContent) == 3) {
+        alert('hey tu as gagné')
+    } else if (Number(scoreComputer) == 3) {
+        alert('hey tu as perdu')
+    } else {
+        figthResult.textContent = "";
 
-    handgun.style.display = "block";
-    arm.style.display = "block";
-    katana.style.display = "block";
+        handgun.style.display = "block";
+        arm.style.display = "block";
+        katana.style.display = "block";
 
-    handgun.classList.remove("object-select");
-    arm.classList.remove("object-select");
-    katana.classList.remove("object-select");
+        handgun.classList.remove("object-select");
+        arm.classList.remove("object-select");
+        katana.classList.remove("object-select");
 
-    handgunComputer.style.display = "block";
-    armComputer.style.display = "block";
-    katanaComputer.style.display = "block";
+        handgunComputer.style.display = "block";
+        armComputer.style.display = "block";
+        katanaComputer.style.display = "block";
 
-    handgunComputer.style.background = "rgba(0,0,0,0)";
-    armComputer.style.background = "rgba(0,0,0,0)";
-    katanaComputer.style.background = "rgba(0,0,0,0)";
+        handgunComputer.style.background = "rgba(0,0,0,0)";
+        armComputer.style.background = "rgba(0,0,0,0)";
+        katanaComputer.style.background = "rgba(0,0,0,0)";
+    }
 }
-
 function round(){
     computerPlay = Math.floor(Math.random() * (3 - 1 + 1) + 1)
     if (computerPlay == 1) {
@@ -162,11 +167,11 @@ handgun.addEventListener("mouseover", function(){
 })
 
 katana.addEventListener("mouseout", function(){
-    handgun.classList.remove("object-hover");
+    katana.classList.remove("object-hover");
 })
 
 arm.addEventListener("mouseout", function(){
-    handgun.classList.remove("object-hover");
+    arm.classList.remove("object-hover");
 })
 
 handgun.addEventListener("mouseout", function(){
