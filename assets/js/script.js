@@ -19,8 +19,7 @@ function handgunChoice(){
     katana.style.display = "none";
     handgun.style.width = "50%";
     handgun.style.height = "50%";
-    handgun.style.backgroundColor = "#02D8F3";
-    handgun.style.background = "radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%)";
+    handgun.classList.add("object-select");
     playerPlay = 1;
 
     round();
@@ -32,9 +31,7 @@ function armChoice(){
     katana.style.display = "none";
     arm.style.width = "50%";
     arm.style.height = "50%";
-
-    arm.style.backgroundColor = "#02D8F3";
-    arm.style.background = "radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%)";
+    arm.classList.add("object-select");
     playerPlay = 2;
 
     round();
@@ -45,8 +42,7 @@ function katanaChoice(){
     handgun.style.display = "none";
     katana.style.width = "50%";
     katana.style.height = "50%";
-    katana.style.backgroundColor = "#02D8F3";
-    katana.style.background = "radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%)";
+    katana.classList.add("object-select");
     playerPlay = 3;
 
     round();
@@ -57,7 +53,6 @@ function handgunChoiceComputer(){
     katanaComputer.style.display = "none";
     handgunComputer.style.width = "50%";
     handgunComputer.style.height = "50%";
-    handgunComputer.style.backgroundColor = "#02D8F3";
     handgunComputer.style.background = "radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%)";
 }
 
@@ -66,7 +61,6 @@ function armChoiceComputer(){
     katanaComputer.style.display = "none";
     armComputer.style.width = "50%";
     armComputer.style.height = "50%";
-    armComputer.style.backgroundColor = "#02D8F3";
     armComputer.style.background = "radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%)";
 }
 
@@ -75,19 +69,19 @@ function katanaChoiceComputer(){
     handgunComputer.style.display = "none";
     katanaComputer.style.width = "50%";
     katanaComputer.style.height = "50%";
-    katanaComputer.style.backgroundColor = "#02D8F3";
     katanaComputer.style.background = "radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%)";
 }
 
 function endRound() {
+    figthResult.textContent = "";
 
     handgun.style.display = "block";
     arm.style.display = "block";
     katana.style.display = "block";
 
-    handgun.style.background = "rgba(0,0,0,0)";
-    arm.style.background = "rgba(0,0,0,0)";
-    katana.style.background = "rgba(0,0,0,0)";
+    handgun.classList.remove("object-select");
+    arm.classList.remove("object-select");
+    katana.classList.remove("object-select");
 
     handgunComputer.style.display = "block";
     armComputer.style.display = "block";
@@ -154,3 +148,27 @@ katana.addEventListener("click", katanaChoice);
 arm.addEventListener("click", armChoice);
 
 handgun.addEventListener("click", handgunChoice);
+
+katana.addEventListener("mouseover", function(){
+    katana.classList.add("object-hover");
+})
+
+arm.addEventListener("mouseover", function(){
+    arm.classList.add("object-hover");
+})
+
+handgun.addEventListener("mouseover", function(){
+    handgun.classList.add("object-hover");
+})
+
+katana.addEventListener("mouseout", function(){
+    handgun.classList.remove("object-hover");
+})
+
+arm.addEventListener("mouseout", function(){
+    handgun.classList.remove("object-hover");
+})
+
+handgun.addEventListener("mouseout", function(){
+    handgun.classList.remove("object-hover");
+})

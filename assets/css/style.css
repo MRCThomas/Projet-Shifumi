@@ -263,6 +263,14 @@ audio::-webkit-media-controls-time-remaining-display {
     color: #FCEE0A;
     font-size: 1.5em;
 }
+.object-select{
+    background : radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%);
+
+}
+.object-hover{
+    background : radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%);
+
+}
 
 /* animation bounce david card*/
 @keyframes DavidAnimate {
