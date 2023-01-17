@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Cyberpunks';
+    src: url(/assets/font/Cyberpunks.woff) format("woff");
+}
+
+
+body{
+background-image: url("/assets/img/background.webp");
+background-size: cover;
+background-size: cover;
+margin: 0; 
+color: white;
+font-family: 'Cyberpunks';
+overflow-y: hidden;
+overflow-x: hidden;
+}
+
+.img_header{
+    width: 100vw;
+}
+
+.img_footer{
+    width: 100vw;
+    padding-top: 1%;
+}
+h2{
+    font-family: 'Cyberpunks';
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.choose{
+    display: flex;
+    justify-content: center;
+}
+
+.perso1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+.img_perso{
+    display: flex;
+    flex : row;
+    justify-content: space-evenly;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    margin : 0
+}
+
+.perso1:hover{
+    color : #02D8F3;
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+
+}
+
+.perso2:hover{
+    color : #02D8F3;
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+
+}
