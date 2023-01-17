@@ -1,0 +1,369 @@
+@font-face {
+    font-family: "Cyberpunks";
+    src: url("../font/Cyberpunks.ttf") format("woff2"),
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Cyberpunks', Arial, Helvetica, sans-serif;
+}
+
+/* sroll-bar */
+::-webkit-scrollbar {
+    width: .7vw;
+    height: 3.3vh;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #02D8F3;
+}
+
+.line-top img{
+    width: 100%;
+}
+
+.line-bottom img{
+    width: 100%; 
+}
+
+.logo-cyberpunk2077 {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-cyberpunk2077 img{
+    width: 30%;
+}
+
+.container-score{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lucy-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    animation: LucyAnimate 13s  ease-in-out infinite;
+}
+
+/* animation bounce lucy card */
+@keyframes LucyAnimate {
+    0% {
+        transform: scale(1);
+    }
+  
+    25% {
+        transform: scale(.95);
+    }
+  
+    50% {
+        transform:scale(1);
+    }
+  
+    75% {
+        transform: scale(.95);
+    }
+  
+    100% {
+        transform: scale(1);
+    }
+}
+
+.david-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    animation: DavidAnimate 13s  ease-in-out infinite;
+}
+
+.david-card-mobile{
+    display: none;
+}
+
+/* animation bounce david card*/
+@keyframes DavidAnimate {
+    0% {
+        transform: scale(1);
+    }
+  
+    25% {
+        transform: scale(.95);
+    }
+  
+    50% {
+        transform:scale(1);
+    }
+  
+    75% {
+        transform: scale(.95);
+    }
+  
+    100% {
+        transform: scale(1);
+    }
+}
+
+.lucy-card img{
+    width: 70%;
+}
+
+.david-card img{
+    width: 70%;
+}
+
+.lucy-card p{
+    padding: 4vh;
+    font-size: 1.5em;
+    letter-spacing: .3em;
+}
+
+.david-card p{
+   padding: 4vh;
+   font-size: 1.5em;
+   letter-spacing: .3em;
+}
+
+.button-score{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    flex-wrap: wrap;
+}
+
+/* musique cyberpunk */
+.music audio{
+    margin-left: 10%;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #FCEE0A;
+}
+
+audio::-webkit-media-controls-current-time-display {
+   font-family: 'Cyberpunks', Arial, Helvetica, sans-serif;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+    font-family: 'Cyberpunks', Arial, Helvetica, sans-serif;;
+}
+
+/* bouton retour à la page d'accueil */
+.button-return button{
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0%;
+    border: 2px solid #FCEE0A;
+    padding: 2vh;
+    color: white;
+}
+
+.button-return button:hover{
+    background-color: #FCEE0A;
+    color: black;
+}
+
+.button-return a{
+    color: white;
+    text-decoration: none;
+}
+
+.music{
+   margin: 2em;
+}
+
+.score{
+    background-color: rgba(0,0,0,.75);
+    backdrop-filter: blur(20px);
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #02D8F3;
+}
+
+.score img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.score img:hover{
+    border-radius: 100%;
+    background: #02D8F3;
+    background: radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%);
+}
+
+.player1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-score{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 50%;
+    margin-top: 2vh;
+}
+
+.score-number{ letter-spacing: .3em;}
+
+.score-number-h3{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    margin: 2vh;
+}
+
+.vs{
+    color: #FCEE0A;
+    font-size: 1.5em;
+}
+
+/* responsive */
+@media only screen and (max-width:1024px) {
+
+    .line-top img{
+        height: 5vh;
+    }
+    
+    .line-bottom img{
+        height: 5vh;
+    }
+
+    .logo-cyberpunk2077 img{
+        width: 70%;
+    }
+
+    .score{
+        height: 50vh;
+        width: 100%;
+        flex-direction: row;
+        border: 0px;
+    }
+
+    .player1{
+        flex-direction: column;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+
+    .player1 img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .player2{
+        flex-direction: column;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+
+    .player2 img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobile-cards{
+        display: flex;
+        justify-content: center;
+    }
+
+    .lucy-card{
+        animation: none;
+        margin-top: 4vh;
+    }
+
+    .lucy-card h3{
+        margin-bottom: 2vh;
+    }
+
+    .david-card{
+        display: none;
+    }
+
+    .david-card-mobile{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4vh;
+        color: white;
+    }
+
+    .david-card-mobile p{
+        padding: 4vh;
+        font-size: 1.5em;
+        letter-spacing: .3em;
+     }
+
+    .david-card-mobile h3{
+        margin-bottom: 2vh;
+    }
+
+    .david-card-mobile img{
+        width: 70%;
+    }
+
+    .david-card h3{
+        margin: 2vh;
+    }
+
+    .button-score{
+        justify-content: center;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
+    .david-card{
+        margin-top: 3vh;
+    }
+
+    .score{
+        margin-bottom: 4vh;
+    }
+
+    .music{
+        margin: 5vh;
+   }
+
+    .music audio{
+        margin-left: 0%;
+    }
+}
