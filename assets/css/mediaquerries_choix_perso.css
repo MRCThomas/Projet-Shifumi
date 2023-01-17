@@ -1,0 +1,61 @@
+@media screen and (max-width : 1024px) {
+    body{
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow-y: hidden;
+    }
+    .img_header img{
+        width: 100%;
+    }
+
+    .img_footer img{
+        width: 100%;
+    }
+
+    .header_img img{
+        height: 3vh;
+    }
+
+    .logo img{
+        height: 15vh;
+    }
+    
+    .img_perso{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .img_perso {
+        /* width: 70%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25vh;
+    }
+
+    .img_perso img{
+        width: 70%;
+    }
+
+    .perso1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .perso2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .choose {
+        margin-bottom: 5vh;
+    }
+
+
+
+}
