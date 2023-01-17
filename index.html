@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <script src="/assets/js/script.js" defer></script>
+  <script src="./assets/js/script.js" defer></script>
   <title>CyberPunk</title>
 </head>
 
@@ -45,33 +45,33 @@
           <div class="score">
             <!-- joueur 1 -->
             <div class="player1">
-              <img src="./assets/img/arme-a-poing.png" />
-              <img src="./assets/img/cyber-hand.png" />
-              <img src="./assets/img/Katana cyberpunk.png" />
+              <img src="./assets/img/arme-a-poing.png" id="handgun"/>
+              <img src="./assets/img/cyber-hand.png" id="cyber-arm"/>
+              <img src="./assets/img/Katana cyberpunk.png" id="katana"/>
             </div>
 
             <!-- score de la manche à afficher -->
             <div class="text-score">
               <div class="score-number">
                 <h2>Score</h2>
-
                 <!-- afficher score dans h3 -->
                 <div class="score-number-h3">
-                  <h3></h3>
+                  <h3 id="score-player">0</h3>
                   <p>/</p>
-                  <h3></h3>
+                  <h3 id="score-computer">0</h3>
                 </div>
               </div>
               <div class="vs">
                 <h2>VS</h2>
+                <h3>Gagné</h3>
               </div>
             </div>
 
             <!-- joueur 2 -->
             <div class="player2">
-              <img src="./assets/img/arme-a-poing.png" />
-              <img src="./assets/img/cyber-hand.png" />
-              <img src="./assets/img/Katana cyberpunk.png" />
+              <img src="./assets/img/arme-a-poing.png" id="handgun-computer"/>
+              <img src="./assets/img/cyber-hand.png" id="cyber-arm-computer"/>
+              <img src="./assets/img/Katana cyberpunk.png" id="katana-computer"/>
             </div>
           </div>
           <div class="david-card">
