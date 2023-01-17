@@ -1,77 +1,40 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>CyberPunk</title>
-  </head>
-  <body>
-    <main>
-      <section>
-        <div class="container-fight">
-          <!-- ligne jaune du haut -->
-          <div class="line-top">
-            <img src="./assets/img/top-line.png" />
-          </div>
 
-          <!-- logo cyberpunk -->
-          <div class="logo-cyberpunk2077">
-            <img src="./assets/img/logo.png" />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="/assets/js/script.js" defer></script>
+  <title>CyberPunk</title>
+</head>
 
-          <!-- container du jeux -->
-          <div class="container-score">
-            <div class="mobile-cards">
-              <div class="lucy-card">
-                <img src="./assets/img/Lucy.png" />
-                <p>Lucy</p>
-                <!-- h3 = score de la précédente partie -->
-                <h3>/</h3>
-              </div>
+<body>
+  <main>
+    <section>
+      <div class="container-fight">
+        <!-- ligne jaune du haut -->
+        <div class="line-top">
+          <img src="./assets/img/top-line.png" />
+        </div>
 
-              <!-- card de david uniquement présente sur mobile -->
-              <div class="david-card-mobile">
-                <img src="./assets/img/David.png" />
-                <p>David</p>
-                <!-- h3 = score de la précédente partie -->
-                <h3>/</h3>
-              </div>
+        <!-- logo cyberpunk -->
+        <div class="logo-cyberpunk2077">
+          <img src="./assets/img/logo.png" />
+        </div>
+
+        <!-- container du jeux -->
+        <div class="container-score">
+          <div class="mobile-cards">
+            <div class="lucy-card">
+              <img src="./assets/img/Lucy.png" />
+              <p>Lucy</p>
+              <!-- h3 = score de la précédente partie -->
+              <h3>/</h3>
             </div>
 
-            <div class="score">
-              <!-- joueur 1 -->
-              <div class="player1">
-                <img src="./assets/img/arme-a-poing.png" />
-                <img src="./assets/img/bras.png" />
-                <img src="./assets/img/Katana cyberpunk.png" />
-              </div>
-
-              <!-- score de la manche à afficher -->
-              <div class="text-score">
-                <div class="score-number">
-                  <h2>Score</h2>
-
-                  <!-- afficher score dans h3 -->
-                  <div class="score-number-h3">
-                    <h3></h3>
-                    <p>/</p>
-                    <h3></h3>
-                  </div>
-                </div>
-                <div class="vs">
-                  <h2>VS</h2>
-                </div>
-              </div>
-
-              <!-- joueur 2 -->
-              <div class="player2">
-                <img src="./assets/img/arme-a-poing.png" />
-                <img src="./assets/img/bras.png" />
-                <img src="./assets/img/Katana cyberpunk.png" />
-              </div>
-            </div>
-            <div class="david-card">
+            <!-- card de david uniquement présente sur mobile -->
+            <div class="david-card-mobile">
               <img src="./assets/img/David.png" />
               <p>David</p>
               <!-- h3 = score de la précédente partie -->
@@ -79,27 +42,66 @@
             </div>
           </div>
 
-          <!-- bouton pour revenir à la page d'accueil -->
-          <div class="button-score">
-            <div class="button-return">
-              <a href="#"> <button>◀ Retour</button></a>
+          <div class="score">
+            <!-- joueur 1 -->
+            <div class="player1">
+              <img src="./assets/img/arme-a-poing.png" />
+              <img src="./assets/img/cyber-hand.png" />
+              <img src="./assets/img/Katana cyberpunk.png" />
             </div>
 
-            <!-- musique cyberpunk -->
-            <div class="music">
-              <audio
-                src="./assets/music/Rosa-Walton-Hallie.mp3"
-                controls
-              ></audio>
+            <!-- score de la manche à afficher -->
+            <div class="text-score">
+              <div class="score-number">
+                <h2>Score</h2>
+
+                <!-- afficher score dans h3 -->
+                <div class="score-number-h3">
+                  <h3></h3>
+                  <p>/</p>
+                  <h3></h3>
+                </div>
+              </div>
+              <div class="vs">
+                <h2>VS</h2>
+              </div>
+            </div>
+
+            <!-- joueur 2 -->
+            <div class="player2">
+              <img src="./assets/img/arme-a-poing.png" />
+              <img src="./assets/img/cyber-hand.png" />
+              <img src="./assets/img/Katana cyberpunk.png" />
             </div>
           </div>
-
-          <!-- ligne jaune en bas -->
-          <div class="line-bottom">
-            <img src="./assets/img/bottom-line.png" />
+          <div class="david-card">
+            <img src="./assets/img/David.png" />
+            <p>David</p>
+            <!-- h3 = score de la précédente partie -->
+            <h3>/</h3>
           </div>
         </div>
-      </section>
-    </main>
-  </body>
+
+        <!-- bouton pour revenir à la page d'accueil -->
+        <div class="button-score">
+          <div class="button-return">
+            <a href="#"> <button>◀ Retour</button></a>
+
+          </div>
+
+          <!-- musique cyberpunk -->
+          <div class="music">
+            <audio src="./assets/music/Rosa-Walton-Hallie.mp3" controls></audio>
+          </div>
+        </div>
+
+        <!-- ligne jaune en bas -->
+        <div class="line-bottom">
+          <img src="./assets/img/bottom-line.png" />
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>

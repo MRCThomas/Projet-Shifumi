@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Cyberpunks";
-    src: url("../font/Cyberpunks.ttf") format("woff2"),
+    src: url("/assets/font/Cyberpunks.ttf") format("woff2"),
 }
 
 *{
@@ -100,29 +100,6 @@ body{
     display: none;
 }
 
-/* animation bounce david card*/
-@keyframes DavidAnimate {
-    0% {
-        transform: scale(1);
-    }
-  
-    25% {
-        transform: scale(.95);
-    }
-  
-    50% {
-        transform:scale(1);
-    }
-  
-    75% {
-        transform: scale(.95);
-    }
-  
-    100% {
-        transform: scale(1);
-    }
-}
-
 .lucy-card img{
     width: 70%;
 }
@@ -212,7 +189,12 @@ audio::-webkit-media-controls-time-remaining-display {
     overflow: hidden;
 }
 
-.score img:hover{
+.player1 img:hover{
+    border-radius: 100%;
+    background: #02D8F3;
+    background: radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%);
+}
+.player2 img:hover{
     border-radius: 100%;
     background: #02D8F3;
     background: radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%);
@@ -242,7 +224,9 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-top: 2vh;
 }
 
-.score-number{ letter-spacing: .3em;}
+.score-number{
+    letter-spacing: .3em;
+}
 
 .score-number-h3{
     display: flex;
@@ -254,6 +238,29 @@ audio::-webkit-media-controls-time-remaining-display {
 .vs{
     color: #FCEE0A;
     font-size: 1.5em;
+}
+
+/* animation bounce david card*/
+@keyframes DavidAnimate {
+    0% {
+        transform: scale(1);
+    }
+  
+    25% {
+        transform: scale(.95);
+    }
+  
+    50% {
+        transform:scale(1);
+    }
+  
+    75% {
+        transform: scale(.95);
+    }
+  
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* responsive */
