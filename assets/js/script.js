@@ -10,6 +10,7 @@ let playerPlay = null
 let computerPlay = null
 let scorePlayer = document.querySelector("#score-player")
 let scoreComputer = document.querySelector("#score-computer")
+let figthResult = document.querySelector("#fight-result");
 
 
 
@@ -76,6 +77,10 @@ function katanaChoiceComputer(){
     katanaComputer.style.background = "radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%)";
 }
 
+function endRound() {
+    alert("hey c'est fini");
+}
+
 function round(){
     computerPlay = Math.floor(Math.random() * (3 - 1 + 1) + 1)
     if (computerPlay == 1) {
@@ -106,14 +111,25 @@ function round(){
 
 function playerWin() {
     scorePlayer.textContent = Number(scorePlayer.textContent) + 1;
+    figthResult.textContent = "You Win";
+    setTimeout(() => {
+        endRound();
+    }, 2000)
 }
 
 function computerWin() {
     scoreComputer.textContent = Number(scoreComputer.textContent) + 1;
+    figthResult.textContent = "You Lose";
+    setTimeout(() => {
+        endRound();
+    }, 2000)
 }
 
 function egality() {
-    alert('égalité');
+    figthResult.textContent = "Eguality";
+    setTimeout(() => {
+        endRound();
+    }, 2000)
 }
 
 katana.addEventListener("click", katanaChoice);
