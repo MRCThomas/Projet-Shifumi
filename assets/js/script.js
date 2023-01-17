@@ -74,9 +74,9 @@ function katanaChoiceComputer(){
 
 function endRound() {
     if (Number(scorePlayer.textContent) == 3) {
-        alert('hey tu as gagné')
+        finish("Victory")
     } else if (Number(scoreComputer) == 3) {
-        alert('hey tu as perdu')
+        finish("Defeat")
     } else {
         figthResult.textContent = "";
 
@@ -97,6 +97,11 @@ function endRound() {
         katanaComputer.style.background = "rgba(0,0,0,0)";
     }
 }
+
+function finish(winOrLose) {
+    alert(winOrLose)
+}
+
 function round(){
     computerPlay = Math.floor(Math.random() * (3 - 1 + 1) + 1)
     if (computerPlay == 1) {
