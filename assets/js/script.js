@@ -27,10 +27,12 @@ function handgunChoice(){
 }
 
 function armChoice(){
+
     handgun.style.display = "none";
     katana.style.display = "none";
     arm.style.width = "50%";
     arm.style.height = "50%";
+
     arm.style.backgroundColor = "#02D8F3";
     arm.style.background = "radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%)";
     playerPlay = 2;
