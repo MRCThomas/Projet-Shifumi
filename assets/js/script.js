@@ -15,8 +15,8 @@ let figthResult = document.querySelector("#fight-result");
 
 
 function handgunChoice(){
-    arm.remove();
-    katana.remove();
+    arm.style.display = "none";
+    katana.style.display = "none";
     handgun.style.width = "50%";
     handgun.style.height = "50%";
     handgun.style.backgroundColor = "#02D8F3";
@@ -27,8 +27,8 @@ function handgunChoice(){
 }
 
 function armChoice(){
-    handgun.remove();
-    katana.remove();
+    handgun.style.display = "none";
+    katana.style.display = "none";
     arm.style.width = "50%";
     arm.style.height = "50%";
     arm.style.backgroundColor = "#02D8F3";
@@ -39,8 +39,8 @@ function armChoice(){
 }
 
 function katanaChoice(){
-    arm.remove();
-    handgun.remove();
+    arm.style.display = "none";
+    handgun.style.display = "none";
     katana.style.width = "50%";
     katana.style.height = "50%";
     katana.style.backgroundColor = "#02D8F3";
@@ -51,8 +51,8 @@ function katanaChoice(){
 }
 
 function handgunChoiceComputer(){
-    armComputer.remove();
-    katanaComputer.remove();
+    armComputer.style.display = "none";
+    katanaComputer.style.display = "none";
     handgunComputer.style.width = "50%";
     handgunComputer.style.height = "50%";
     handgunComputer.style.backgroundColor = "#02D8F3";
@@ -60,8 +60,8 @@ function handgunChoiceComputer(){
 }
 
 function armChoiceComputer(){
-    handgunComputer.remove();
-    katanaComputer.remove();
+    handgunComputer.style.display = "none";
+    katanaComputer.style.display = "none";
     armComputer.style.width = "50%";
     armComputer.style.height = "50%";
     armComputer.style.backgroundColor = "#02D8F3";
@@ -69,8 +69,8 @@ function armChoiceComputer(){
 }
 
 function katanaChoiceComputer(){
-    armComputer.remove();
-    handgunComputer.remove();
+    armComputer.style.display = "none";
+    handgunComputer.style.display = "none";
     katanaComputer.style.width = "50%";
     katanaComputer.style.height = "50%";
     katanaComputer.style.backgroundColor = "#02D8F3";
@@ -78,7 +78,22 @@ function katanaChoiceComputer(){
 }
 
 function endRound() {
-    alert("hey c'est fini");
+
+    handgun.style.display = "block";
+    arm.style.display = "block";
+    katana.style.display = "block";
+
+    handgun.style.background = "rgba(0,0,0,0)";
+    arm.style.background = "rgba(0,0,0,0)";
+    katana.style.background = "rgba(0,0,0,0)";
+
+    handgunComputer.style.display = "block";
+    armComputer.style.display = "block";
+    katanaComputer.style.display = "block";
+
+    handgunComputer.style.background = "rgba(0,0,0,0)";
+    armComputer.style.background = "rgba(0,0,0,0)";
+    katanaComputer.style.background = "rgba(0,0,0,0)";
 }
 
 function round(){
