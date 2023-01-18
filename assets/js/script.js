@@ -11,6 +11,11 @@ let computerPlay = null
 let scorePlayer = document.querySelector("#score-player")
 let scoreComputer = document.querySelector("#score-computer")
 let figthResult = document.querySelector("#fight-result");
+let gameFrame = document.querySelector("#game-frame");
+let numberWin = document.querySelector("#number-win")
+let numberLose1 = document.querySelector("#number-lose1")
+let numberLose2 = document.querySelector("#number-lose2")
+let buttonReset = document.querySelector("#button-reset");
 
 
 
@@ -74,9 +79,9 @@ function katanaChoiceComputer(){
 
 function endRound() {
     if (Number(scorePlayer.textContent) == 3) {
-        finish("Victory")
-    } else if (Number(scoreComputer) == 3) {
-        finish("Defeat")
+        finish(1)
+    } else if (Number(scoreComputer.textContent) == 3) {
+        finish(2)
     } else {
         figthResult.textContent = "";
 
@@ -99,7 +104,21 @@ function endRound() {
 }
 
 function finish(winOrLose) {
-    alert(winOrLose)
+    for (let i = 0; i < gameFrame.children.length; i++) {
+        gameFrame.children[i].style.display = "none";
+    }
+    if (winOrLose == 1) {
+        gameFrame.innerHTML = `<p class=".win-lose">Victory</p>`;
+        localStorage.setItem("nmbV", (Number(localStorage.getItem("nmbV"))+1))
+    } else {
+        gameFrame.innerHTML = `<p class=".win-lose">Defeat</p>`;
+        localStorage.setItem("nmbD", (Number(localStorage.getItem("nmbD"))+1))
+    }
+    localStorage.setItem("scoreP", 0);
+    localStorage.setItem("scoreC", 0);
+    setTimeout(() => {
+        resetFunction2(5000);
+    }, 2000)
 }
 
 function round(){
@@ -131,16 +150,18 @@ function round(){
 }
 
 function playerWin() {
-    scorePlayer.textContent = Number(scorePlayer.textContent) + 1;
+    scorePlayer.textContent = Number(localStorage.getItem("scoreP")) + 1;
     figthResult.textContent = "You Win";
+    localStorage.setItem("scoreP", scorePlayer.textContent)
     setTimeout(() => {
         endRound();
     }, 2000)
 }
 
 function computerWin() {
-    scoreComputer.textContent = Number(scoreComputer.textContent) + 1;
+    scoreComputer.textContent = Number(localStorage.getItem("scoreC")) + 1;
     figthResult.textContent = "You Lose";
+    localStorage.setItem("scoreC", scoreComputer.textContent)
     setTimeout(() => {
         endRound();
     }, 2000)
@@ -151,6 +172,18 @@ function egality() {
     setTimeout(() => {
         endRound();
     }, 2000)
+}
+
+function resetFunction(timeoutPeriod) {
+    Number(localStorage.setItem("scoreP", 0));
+    Number(localStorage.setItem("scoreC", 0));
+    Number(localStorage.setItem("nmbV", 0));
+    Number(localStorage.setItem("nmbD", 0));
+    setTimeout("location.reload(true);",timeoutPeriod);
+}
+
+function resetFunction2(timeoutPeriod) {
+    setTimeout("location.reload(true);",timeoutPeriod);
 }
 
 katana.addEventListener("click", katanaChoice);
@@ -182,3 +215,32 @@ arm.addEventListener("mouseout", function(){
 handgun.addEventListener("mouseout", function(){
     handgun.classList.remove("object-hover");
 })
+
+buttonReset.addEventListener("click", resetFunction);
+
+window.addEventListener("load", function () {
+    if (localStorage.getItem("nmbV") == null) {
+        localStorage.setItem("nmbV", 0);
+    }
+    if (localStorage.getItem("nmbB") == null) {
+        localStorage.setItem("nmbb", 0);
+    }
+    if (localStorage.getItem("scoreP") == null) {
+        localStorage.setItem("scoreP", 0);
+    }
+    if (localStorage.getItem("scoreC") == null) {
+        localStorage.setItem("scoreC", 0);
+    }
+    scoreComputer.textContent = Number(localStorage.getItem("scoreP"));
+    scorePlayer.textContent = Number(localStorage.getItem("scoreC"));
+
+    if (Number(localStorage.getItem("nmbV"))+Number(localStorage.getItem("nmbD")) != 0) {
+        numberWin.textContent = `${(Number(localStorage.getItem("nmbV"))/(Number(localStorage.getItem("nmbV"))+Number(localStorage.getItem("nmbD"))))*100}%`
+        numberLose1.textContent = `${(Number(localStorage.getItem("nmbD"))/(Number(localStorage.getItem("nmbV"))+Number(localStorage.getItem("nmbD"))))*100}%`
+        numberLose2.textContent = `${(Number(localStorage.getItem("nmbD"))/(Number(localStorage.getItem("nmbV"))+Number(localStorage.getItem("nmbD"))))*100}%`    
+    } else {
+        numberWin.textContent = `0%`
+        numberLose1.textContent = `0%`
+        numberLose2.textContent = `0%`    
+    }
+});
