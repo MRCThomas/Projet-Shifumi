@@ -77,9 +77,9 @@ function katanaChoiceComputer(){
 }
 
 function endRound() {
-    if (Number(scorePlayer.textContent) == 3) {
+    if (Number(scorePlayer.textContent) >= 3) {
         finish(1)
-    } else if (Number(scoreComputer.textContent) == 3) {
+    } else if (Number(scoreComputer.textContent) >= 3) {
         finish(2)
     } else {
         figthResult.textContent = "";
