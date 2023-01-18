@@ -162,8 +162,10 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 /* bouton retour à la page d'accueil */
-
 .button-return{
+    margin-right: 1vh;
+}
+.button-reset{
     margin-right: 1vh;
 }
 .button-return button{
@@ -211,7 +213,7 @@ audio::-webkit-media-controls-time-remaining-display {
     width: 50vw;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #02D8F3;
+    align-items: center;
 }
 
 .score img{
@@ -327,7 +329,9 @@ audio::-webkit-media-controls-time-remaining-display {
         flex-direction: row;
         border: 0px;
     }
-
+    .button-yellow{
+        justify-content: center;
+    }
     .player1{
         flex-direction: column;
         margin-top: 3vh;

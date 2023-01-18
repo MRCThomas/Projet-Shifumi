@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+video
+{
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+.container{
+    color: rgb(0, 0, 0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.rules{
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    border-radius: 10px;
+}
+.handgun img{
+    width: 30vh;
+}
+.arm img{
+    width: 30vh;
+}
+.katana img{
+    width: 30vh;
+}
+.before{
+    margin-right: 1vh;
+}
+.before button{
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0%;
+    border: 2px solid #FCEE0A;
+    padding: 2vh;
+    color: white;
+}
+.before button:hover{
+    background-color: #FCEE0A;
+    color: black;
+}
+.before a{
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width:420px) {
+    div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container{
+        justify-content: center;
+    }
+    .rules{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rules svg{
+        transform: rotate(90deg);
+    }
+    .handgun{
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .arm{
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+}
