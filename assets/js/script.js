@@ -11,7 +11,7 @@ let computerPlay = null
 let scorePlayer = document.querySelector("#score-player")
 let scoreComputer = document.querySelector("#score-computer")
 let figthResult = document.querySelector("#fight-result");
-
+let buttonReset = document.querySelector("#button-reset");
 
 
 function handgunChoice(){
@@ -148,9 +148,15 @@ function egality() {
         endRound();
     }, 2000)
 }
+//FONCTION RELOAD
+function resetFunction(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
 
 katana.addEventListener("click", katanaChoice);
 
 arm.addEventListener("click", armChoice);
 
 handgun.addEventListener("click", handgunChoice);
+
+buttonReset.addEventListener("click", resetFunction);
