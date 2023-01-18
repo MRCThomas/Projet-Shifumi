@@ -11,6 +11,7 @@ font-family: 'Cyberpunks';
 /* overflow-y: hidden; */
 overflow-x: hidden;
 }
+
 video
 {
     object-fit: cover;
@@ -23,6 +24,7 @@ video
     height: 100%;
     width: 100%;
 }
+
 .img_header img{
     width: 100vw;
 }

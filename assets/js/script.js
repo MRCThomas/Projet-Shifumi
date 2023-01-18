@@ -107,12 +107,13 @@ function finish(winOrLose) {
         gameFrame.children[i].style.display = "none";
     }
     if (winOrLose == 1) {
-        gameFrame.innerHTML = `<p class=".win-lose">Victory</p>`;
+        gameFrame.innerHTML = `<p class="win-lose">Victory</p>`;
         localStorage.setItem("nmbV", (Number(localStorage.getItem("nmbV"))+1))
     } else {
-        gameFrame.innerHTML = `<p class=".win-lose">Defeat</p>`;
+        gameFrame.innerHTML = `<p class="win-lose">Defeat</p>`;
         localStorage.setItem("nmbD", (Number(localStorage.getItem("nmbD"))+1))
     }
+    gameFrame.style.justifyContent = "center";
     localStorage.setItem("scoreP", 0);
     localStorage.setItem("scoreC", 0);
     setTimeout(() => {
@@ -145,7 +146,7 @@ function round(){
         } else {
             computerWin();
         }
-    }, 2000)
+    }, 500)
 }
 
 function playerWin() {
@@ -234,8 +235,8 @@ window.addEventListener("load", function () {
     if (localStorage.getItem("scoreC") == null) {
         localStorage.setItem("scoreC", 0);
     }
-    scoreComputer.textContent = Number(localStorage.getItem("scoreP"));
-    scorePlayer.textContent = Number(localStorage.getItem("scoreC"));
+    scoreComputer.textContent = Number(localStorage.getItem("scoreC"));
+    scorePlayer.textContent = Number(localStorage.getItem("scoreP"));
 
     if (Number(localStorage.getItem("nmbV"))+Number(localStorage.getItem("nmbD")) != 0) {
         numberWin.textContent = `${(Number(localStorage.getItem("nmbV"))/(Number(localStorage.getItem("nmbV"))+Number(localStorage.getItem("nmbD"))))*100}%`
