@@ -162,8 +162,10 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 /* bouton retour à la page d'accueil */
-
 .button-return{
+    margin-right: 1vh;
+}
+.button-reset{
     margin-right: 1vh;
 }
 .button-return button{
@@ -347,7 +349,9 @@ audio::-webkit-media-controls-time-remaining-display {
         flex-direction: row;
         border: 0px;
     }
-
+    .button-yellow{
+        justify-content: center;
+    }
     .player1{
         flex-direction: column;
         margin-top: 3vh;
