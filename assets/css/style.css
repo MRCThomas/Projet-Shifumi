@@ -258,6 +258,10 @@ audio::-webkit-media-controls-time-remaining-display {
     margin-top: 2vh;
 }
 
+.score-computer{
+    font-size: 1.5em;
+}
+
 .score-number{
     letter-spacing: .3em;
 }
