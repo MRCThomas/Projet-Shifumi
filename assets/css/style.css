@@ -211,7 +211,6 @@ audio::-webkit-media-controls-time-remaining-display {
     width: 50vw;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #02D8F3;
 }
 
 .score img{
@@ -270,9 +269,14 @@ audio::-webkit-media-controls-time-remaining-display {
     margin: 2vh;
 }
 
+.colorh-result{
+    color: white;
+}
+
 .vs{
     color: #FCEE0A;
     font-size: 1.5em;
+    text-align: center;
 }
 .object-select{
     background : radial-gradient(circle farthest-side at center center, #02D8F3 0%, rgba(0,0,0,0) 70%);
@@ -304,6 +308,18 @@ audio::-webkit-media-controls-time-remaining-display {
     100% {
         transform: scale(1);
     }
+}
+
+.wiin-lose-center{
+    justify-content: center;
+}
+
+.win-lose{
+    color: #FCEE0A;
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* responsive */

@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/assets/css/style_choix_perso.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/mediaquerries_choix_perso.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="/assets/img/Cyberpunks.ttf">
+    <link href="./assets/css/style_choix_perso.css" rel="stylesheet" type="text/css">
+    <link href="./assets/css/mediaquerries_choix_perso.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="./assets/img/Cyberpunks.ttf">
+    <script src="./assets/js/script2.js" defer></script>
     <title>Document</title>
 </head>
 <body>
+    <video preload="true" autoplay="" muted="" loop="" playsinline="" poster="./assets/img/bg5.png"
+        data-testid="space:video">
+        <source src="./assets/img/cyberpunk-edgerunners.mp4" type="video/mp4">
+    </video>
     <header>
         <div class = "img_header">
 
-            <img src="/assets/img/razor-bottom-yellow-7dbbe9ac (1) 2.webp">
+            <img src="./assets/img/razor-bottom-yellow-7dbbe9ac (1) 2.webp">
 
         </div>
     </header>
@@ -22,7 +27,7 @@
 
         <div class="logo">
 
-            <img src="/assets/img/kisspng-cyberpunk-2077-logo-game-electronic-entertainment-cyberpunk-2077-logo-5b4b606e264d14 1.webp">
+            <img src="./assets/img/kisspng-cyberpunk-2077-logo-game-electronic-entertainment-cyberpunk-2077-logo-5b4b606e264d14 1.webp">
 
         </div>
 
@@ -34,16 +39,16 @@
 
         <div class="img_perso">
 
-            <div class="perso1">
+            <div class="perso1" onclick="lucy()">
 
-                <img src="/assets/img/Lucy.webp" alt="Lucy">
+                <img src="./assets/img/Lucy.webp" alt="Lucy">
                 <p class="name">Lucy</p>
 
             </div>
 
-            <div class="perso2">
+            <div class="perso2" onclick="david()">
 
-                <img src="/assets/img/David.webp" alt="David">
+                <img src="./assets/img/David.webp" alt="David">
                 <p class="name">David</p>
 
             </div>
@@ -58,7 +63,7 @@
         
         <div class="img_footer">
 
-            <img src="/assets/img/razor-bottom-yellow-7dbbe9ac (1) 3.webp" alt="footer">
+            <img src="./assets/img/razor-bottom-yellow-7dbbe9ac (1) 3.webp" alt="footer">
     
         </div>
     </main>
