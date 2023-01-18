@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Cyberpunks';
-    src: url(/assets/font/Cyberpunks.woff) format("woff");
+    src: url(../font/Cyberpunks.otf) format("woff");
 }
 
 
 body{
-background-image: url("/assets/img/background.webp");
+background-image: url("./mediaquerries_choix_perso.css");
 background-size: cover;
 background-size: cover;
 margin: 0; 
