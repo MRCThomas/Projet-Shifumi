@@ -234,8 +234,8 @@ window.addEventListener("load", function () {
     if (localStorage.getItem("scoreC") == null) {
         localStorage.setItem("scoreC", 0);
     }
-    scoreComputer.textContent = Number(localStorage.getItem("scoreP"));
-    scorePlayer.textContent = Number(localStorage.getItem("scoreC"));
+    scoreComputer.textContent = Number(localStorage.getItem("scoreC"));
+    scorePlayer.textContent = Number(localStorage.getItem("scoreP"));
 
     if (Number(localStorage.getItem("nmbV"))+Number(localStorage.getItem("nmbD")) != 0) {
         numberWin.textContent = `${(Number(localStorage.getItem("nmbV"))/(Number(localStorage.getItem("nmbV"))+Number(localStorage.getItem("nmbD"))))*100}%`
