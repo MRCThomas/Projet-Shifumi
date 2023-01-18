@@ -1,0 +1,116 @@
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="./assets/js/script.js" defer></script>
+  <title>CyberPunk</title>
+</head>
+
+<body>
+  <main>
+    <section>
+      <video preload="true" autoplay="" muted="" loop="" playsinline="" poster="./assets/img/bg5.png"
+        data-testid="space:video">
+        <source src="./assets/img/cyberpunk-edgerunners.mp4" type="video/mp4">
+      </video>
+      <div class="container-fight">
+        <!-- ligne jaune du haut -->
+        <div class="line-top">
+          <img src="./assets/img/top-line.png" />
+        </div>
+
+        <!-- logo cyberpunk -->
+        <div class="logo-cyberpunk2077">
+          <img src="./assets/img/logo.png" />
+        </div>
+
+        <!-- container du jeux -->
+        <div class="container-score">
+          <div class="mobile-cards">
+            <div class="lucy-card">
+              <img src="./assets/img/Lucy.png" />
+              <p>Lucy</p>
+              <!-- h3 = score de la précédente partie -->
+              <h3 id="number-win" class="score-computer"></h3>
+            </div>
+
+            <!-- card de david uniquement présente sur mobile -->
+            <div class="david-card-mobile">
+              <img src="./assets/img/David.png" />
+              <p>David</p>
+              <!-- h3 = score de la précédente partie -->
+              <h3 id="number-lose1" class="score-computer"></h3>
+            </div>
+          </div>
+
+          <div class="score" id="game-frame">
+            <!-- joueur 1 -->
+            <div class="player1">
+              <img src="./assets/img/arme-a-poing.png" id="handgun" />
+              <img src="./assets/img/cyber-hand.png" id="cyber-arm" />
+              <img src="./assets/img/Katana cyberpunk.png" id="katana" />
+            </div>
+
+            <!-- score de la manche à afficher -->
+            <div class="text-score">
+              <div class="score-number">
+                <h2>Score</h2>
+                <!-- afficher score dans h3 -->
+                <div class="score-number-h3">
+
+                  <h3 id="score-player">0</h3>
+                  <p>/</p>
+                  <h3 id="score-computer">0</h3>
+
+                </div>
+              </div>
+              <div class="vs">
+                <h2>VS</h2>
+                <h3 class="colorh-result" id="fight-result"></h3>
+              </div>
+            </div>
+
+            <!-- joueur 2 -->
+            <div class="player2">
+              <img src="./assets/img/arme-a-poing.png" id="handgun-computer" />
+              <img src="./assets/img/cyber-hand.png" id="cyber-arm-computer" />
+              <img src="./assets/img/Katana cyberpunk.png" id="katana-computer" />
+            </div>
+          </div>
+          <div class="david-card">
+            <img src="./assets/img/David.png" />
+            <p>David</p>
+            <!-- h3 = score de la précédente partie -->
+            <h3 id="number-Lose2" class="score-computer"></h3>
+          </div>
+        </div>
+
+        <!-- bouton pour revenir à la page d'accueil -->
+        <div class="button-score">
+          <div class="button-yellow">
+            <div class="button-return">
+              <a href="index.html"> <button>◀ Retour</button></a>
+            </div>
+            <div class="button-reset">
+              <button id="button-reset">↺ Reset</button>
+            </div>
+            <div class="button-return">
+              <a href="rules.html"> <button>◀ Règles</button></a>
+            </div>
+          </div>
+          <div class="music">
+            <audio src="./assets/music/Rosa-Walton-Hallie.mp3" controls></audio>
+          </div>
+        </div>
+        <!-- ligne jaune en bas -->
+        <div class="line-bottom">
+          <img src="./assets/img/bottom-line.png" />
+        </div>
+    </section>
+  </main>
+</body>
+
+</html>

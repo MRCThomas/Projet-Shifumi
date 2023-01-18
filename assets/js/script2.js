@@ -3,5 +3,5 @@ function david() {
 }
 
 function lucy() {
-    window.location.assign("index.html");
+    window.location.assign("game_page.html");
 }
