@@ -18,7 +18,6 @@ let numberLose2 = document.querySelector("#number-lose2")
 let buttonReset = document.querySelector("#button-reset");
 
 
-
 function handgunChoice(){
     arm.style.display = "none";
     katana.style.display = "none";
@@ -172,6 +171,10 @@ function egality() {
     setTimeout(() => {
         endRound();
     }, 2000)
+}
+//FONCTION RELOAD
+function resetFunction(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
 }
 
 function resetFunction(timeoutPeriod) {

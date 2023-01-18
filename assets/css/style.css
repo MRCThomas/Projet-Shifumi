@@ -10,12 +10,23 @@
 }
 
 body{
-    background-image: url(../img/bg1.jpg);
+    background-image: url(../img/Screen-Game-Cyberfumi);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Cyberpunks', Arial, Helvetica, sans-serif;
 }
-
+video
+{
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
 /* sroll-bar */
 ::-webkit-scrollbar {
     width: .7vw;
